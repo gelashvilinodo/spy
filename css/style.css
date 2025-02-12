@@ -1,0 +1,92 @@
+:root {
+    --georgianFont: "Noto Serif Georgian", serif;
+}
+
+body {
+    background-color: #000000f1;
+}
+
+.saxeli {
+    color: #ff0000;
+    font-family: var(--georgianFont);
+}
+
+.main_cont {
+    padding-top: 30px;
+    width: min(100%, 500px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* first page  */
+
+.main_cont img {
+    width: 60%;
+}
+
+.start_btn {
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: var(--georgianFont);
+    cursor: pointer;
+}
+
+.start_btn a {
+    color: white;
+    font-family: var(--georgianFont);
+    color: white;
+    font-size: 20px;
+}
+
+/* 2nd page  */
+
+.how_many {
+    font-family: var(--georgianFont);
+    font-size: 18px;
+    color: white;
+}
+
+#player_count {
+    width: 40%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ff0000;
+    font-family: var(--georgianFont);
+    font-size: 18px;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+continue_btn {
+    border: none;
+    background-color: #ff0000;
+    color: #ff0000;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.continue_btn a {
+    font-family: var(--georgianFont);
+    background-color: transparent;
+    font-size: 20px;
+    width: 100%;
+}
+
+.back_to_main {
+    border: none;
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: var(--georgianFont);
+    cursor: pointer;
+}
