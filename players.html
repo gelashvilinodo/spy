@@ -15,18 +15,27 @@
   </head>
   <body>
     <div class="main_cont">
-      <h3 class="how_many">გთხოვთ შეიყვანოთ მოთამაშეთა რაოდენობა</h3>
-      <input type="number" id="player_count" min="3" />
-      <button class="before_start" onclick="createNameInputs()">
-        გაგრძელება
-      </button>
-      <h3 class="names_head">გთხოვთ შეიყვანოთ სახელები</h3>
-      <div id="name_inputs"></div>
-      <button class="add_name_btn" onclick="storePlayerNames()">
-        შენახვა
-        <!-- <a href="game.html">თამაშის დაწყება</a> -->
-      </button>
-      <a class="back_to_main" href="index.html">მთავარ გვერდზე დაბრუნება</a>
+      <section class="introduction">
+        <h3 class="how_many">გთხოვთ შეიყვანოთ მოთამაშეთა რაოდენობა</h3>
+        <input type="number" id="player_count" min="3" />
+        <button class="before_start" onclick="createNameInputs()">
+          გაგრძელება
+        </button>
+        <h3 class="names_head">გთხოვთ შეიყვანოთ სახელები</h3>
+        <div id="name_inputs"></div>
+        <button
+          class="add_name_btn"
+          id="submit_names"
+          onclick="storePlayerNames()"
+        >
+          სახელების შენახვა
+        </button>
+        <a class="before_start" href="#game">თამაშის დაწყება</a>
+        <a class="back_to_main" href="index.html">მთავარ გვერდზე დაბრუნება</a>
+      </section>
+      <section id="game">
+        <div id="card_container"></div>
+      </section>
     </div>
     <script src="script.js"></script>
   </body>

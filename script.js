@@ -128,7 +128,22 @@ function storePlayerNames() {
     playerNames.push(playerName);
   }
   console.log(playerNames);
-  return playerNames;
+
+  let youAreSpy = Math.floor(Math.random() * playerNames.length);
+  console.log("ჯაშუშუ", youAreSpy);
 }
-const finalPlayerNames = storePlayerNames();
-console.log(finalPlayerNames);
+
+console.log("ჯაშუშუ", youAreSpy);
+console.log(playerNames);
+
+let theWord = georgianNouns[Math.floor(Math.random() * georgianNouns.length)];
+
+// let youAreSpy = Math.floor(Math.random() * playerNames.length);
+// console.log(playerNames);
+
+// console.log("ჯაშუშუ", youAreSpy);
+
+// let cardContainer = document.getElementById("card_container");
+// for (ler i = 0; i < playerNames.length; i++) {
+
+// }

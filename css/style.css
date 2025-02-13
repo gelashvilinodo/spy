@@ -2,6 +2,10 @@
     --georgianFont: "Noto Serif Georgian", serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000000f1;
 }
@@ -14,15 +18,19 @@ body {
 .main_cont {
     padding-top: 30px;
     width: min(100%, 500px);
-    height: 100vh;
+
+}
+
+/* first page  */
+
+.introduction {
+    height: 105vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
 }
-
-/* first page  */
 
 .main_cont img {
     width: 60%;
@@ -87,9 +95,9 @@ continue_btn {
 }
 
 .back_to_main {
-    border: none;
     background-color: #ff0000;
-    color: white;
+    border: none;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 15px;
     font-family: var(--georgianFont);
@@ -108,9 +116,12 @@ continue_btn {
 .add_name_btn {
     border: none;
     background-color: #ff0000;
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
+    font-family: var(--georgianFont);
+    font-size: 18px;
 }
 
 #name_inputs {
@@ -135,8 +146,11 @@ continue_btn {
     color: white;
 }
 
-.add_name_btn a {
-    color: white;
-    font-family: var(--georgianFont);
-    font-size: 20px;
+/* game page  */
+
+#game {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
