@@ -102,6 +102,8 @@ const georgianNouns = [
 ];
 
 let playerNames = [];
+let spy = "";
+let spyForUse = "ჯაშუში";
 
 function createNameInputs() {
   const numPlayers = parseInt(document.getElementById("player_count").value);
@@ -128,22 +130,46 @@ function storePlayerNames() {
     playerNames.push(playerName);
   }
   console.log(playerNames);
-
-  let youAreSpy = Math.floor(Math.random() * playerNames.length);
-  console.log("ჯაშუშუ", youAreSpy);
+  selectSpy();
+  console.log(spy);
 }
 
-console.log("ჯაშუშუ", youAreSpy);
-console.log(playerNames);
+function selectSpy() {
+  if (playerNames.length > 0) {
+    let spyIndex = Math.floor(Math.random() * playerNames.length);
+    spy = playerNames[spyIndex];
+  } else {
+    alert("შეავსე მოთამაშეების სახელები");
+  }
+}
 
-let theWord = georgianNouns[Math.floor(Math.random() * georgianNouns.length)];
+const cardContainer = document.getElementById("card_container");
 
-// let youAreSpy = Math.floor(Math.random() * playerNames.length);
-// console.log(playerNames);
+theWord = georgianNouns[Math.floor(Math.random() * georgianNouns.length)];
 
-// console.log("ჯაშუშუ", youAreSpy);
-
-// let cardContainer = document.getElementById("card_container");
-// for (ler i = 0; i < playerNames.length; i++) {
-
-// }
+function createCard() {
+  for (let i = 0; i < playerNames.length; i++) {
+    const card = document.createElement("div");
+    cardContainer.appendChild(card);
+    card.classList.add("card");
+    if (playerNames[i] === spy) {
+      let saxeli = document.createElement("h2");
+      card.appendChild(saxeli);
+      saxeli.classList.add("motamashis_saxeli");
+      saxeli.innerHTML = `${playerNames[i]}`;
+      let sityva = document.createElement("h1");
+      sityva.innerHTML = `შენ ხარ: ${spyForUse}`;
+      card.appendChild(sityva);
+      sityva.classList.add("sityva");
+    } else {
+      let saxeli = document.createElement("h2");
+      card.appendChild(saxeli);
+      saxeli.classList.add("motamashis_saxeli");
+      saxeli.innerHTML = `${playerNames[i]}`;
+      let sityva = document.createElement("h1");
+      sityva.innerHTML = `სიტყვა: ${theWord}`;
+      card.appendChild(sityva);
+      sityva.classList.add("sityva");
+    }
+  }
+}
